@@ -6,6 +6,9 @@
     "publishConfig": {
         "@nite1984:registry": "https://npm.pkg.github.com"
     },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/nite1984/nite-toasts.git"
