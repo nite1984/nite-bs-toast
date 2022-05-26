@@ -1,0 +1,22 @@
+{
+    "name": "nite-toasts",
+    "version": "1.0.0",
+    "description": "Javascript Toasts Generator",
+    "main": "index.js",
+    "publishConfig": {
+        "@nite1984:registry": "https://npm.pkg.github.com"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nite1984/nite-toasts.git"
+    },
+    "author": "Nite",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/nite1984/nite-toasts/issues"
+    },
+    "homepage": "https://github.com/nite1984/nite-toasts#readme"
+}
