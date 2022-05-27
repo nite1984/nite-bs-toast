@@ -1,6 +1,6 @@
 {
     "name": "@nite1984/nite-bs-toast",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Javascript Toasts Generator",
     "main": "index.js",
     "publishConfig": {
