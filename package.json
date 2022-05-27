@@ -1,5 +1,5 @@
 {
-    "name": "nite-toasts",
+    "name": "nite-bs-toast",
     "version": "1.0.0",
     "description": "Javascript Toasts Generator",
     "main": "index.js",
@@ -11,12 +11,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/nite1984/nite-toasts.git"
+        "url": "git+https://github.com/nite1984/nite-bs-toast.git"
     },
     "author": "Nite",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/nite1984/nite-toasts/issues"
+        "url": "https://github.com/nite1984/nite-bs-toast/issues"
     },
-    "homepage": "https://github.com/nite1984/nite-toasts#readme"
+    "homepage": "https://github.com/nite1984/nite-bs-toast#readme"
 }

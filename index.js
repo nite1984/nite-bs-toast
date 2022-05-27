@@ -1,7 +1,7 @@
 console.log('nite toast');
 
 /**/
-const NiteToasts = (function () {
+const NiteBsToasts = (function () {
     'use strict';
 
     const Constructor = function () {
@@ -121,5 +121,5 @@ const NiteToasts = (function () {
 })();
 
 export {
-    NiteToasts
+    NiteBsToasts
 };
