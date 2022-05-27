@@ -3,8 +3,7 @@ const NiteBsToast = (function () {
     'use strict';
 
     const defaults = {
-        imagesPerPage: 4,
-        insertUrlCallback: null,
+        toastContainerSelector: '.toast-container',
     };
 
     let settings = Object.assign({}, defaults, {});
@@ -15,24 +14,24 @@ const NiteBsToast = (function () {
     /**/
     const createToastElement = function (type, title, text) {
 
-        let icon_color;
+        let iconColor;
         switch (type) {
             case 'success':
-                icon_color = '#198754';
+                iconColor = '#198754';
                 break;
             case 'warning':
-                icon_color = '#ffc107';
+                iconColor = '#ffc107';
                 break;
             default:
-                icon_color = '#dc3545';
+                iconColor = '#dc3545';
                 break;
         }
 
         let toastHtml = `<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="${icon_color}"></rect></svg>
+                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="${iconColor}"></rect></svg>
                 <strong class="me-auto">${title}</strong>
-                <button type="button" class="btn-close" disabled aria-label="Close"></button>
+                <button type="button" class="btn-close" aria-label="Close"></button>
             </div>
             <div class="toast-body">${text}</div>
             </div>`;
@@ -50,7 +49,7 @@ const NiteBsToast = (function () {
     niteBsToast.successToast = function (title, msg) {
 
         const toastEl = createToastElement('success', title, msg);
-        document.querySelector('.toast-container').appendChild(toastEl);
+        document.querySelector(settings.toastContainerSelector).appendChild(toastEl);
 
         const bsToast = new bootstrap.Toast(toastEl);
         bsToast.show();
@@ -60,7 +59,7 @@ const NiteBsToast = (function () {
     niteBsToast.errorToast = function (title, msg) {
 
         const toastEl = createToastElement('error', title, msg);
-        document.querySelector('.toast-container').appendChild(toastEl);
+        document.querySelector(settings.toastContainerSelector).appendChild(toastEl);
 
         const bsToast = new bootstrap.Toast(toastEl);
         bsToast.show();
@@ -72,7 +71,7 @@ const NiteBsToast = (function () {
         niteBsToast.hideLoadingToast();
 
         bsLoadingToastEl = createToastElement('warning', title, msg);
-        document.querySelector('.toast-container').appendChild(bsLoadingToastEl);
+        document.querySelector(settings.toastContainerSelector).appendChild(bsLoadingToastEl);
 
         bsLoadingToast = new bootstrap.Toast(bsLoadingToastEl, {
             animation: true,
