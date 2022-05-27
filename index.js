@@ -1,5 +1,5 @@
 /**/
-const NiteBsToast = (function () {
+const niteBsToast = (function () {
     'use strict';
 
     const defaults = {
@@ -116,4 +116,4 @@ const NiteBsToast = (function () {
     return niteBsToast;
 })();
 
-module.exports = NiteBsToast;
+module.exports = niteBsToast;
