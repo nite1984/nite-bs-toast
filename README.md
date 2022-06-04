@@ -1,4 +1,4 @@
-# nite-toasts
+# nite-bs-toasts
 
 # Install
 
@@ -11,6 +11,8 @@ import niteBsToast from '@nite1984/nite-bs-toast';
 
 window.niteBsToast = niteBsToast;
 ```
+
+# Usage
 
 ```
 niteBsToast.successToast('ok', 'msg');
