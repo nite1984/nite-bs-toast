@@ -1,3 +1,12 @@
+/**
+ * niteBsToast
+ * v1.0.2 2022/06/10
+ * Author: Marco Scattina
+ * https://github.com/nite1984/nite-bs-toast
+ * 
+ * Released under the MIT License
+ */
+
 /**/
 const niteBsToast = (function () {
     'use strict';
