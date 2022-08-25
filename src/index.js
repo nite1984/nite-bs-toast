@@ -40,7 +40,7 @@ const niteBsToast = (function () {
             <div class="toast-header">
                 <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="${iconColor}"></rect></svg>
                 <strong class="me-auto">${title}</strong>
-                <button type="button" class="btn-close" aria-label="Close"></button>
+                <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="toast"></button>
             </div>
             <div class="toast-body">${text}</div>
             </div>`;
