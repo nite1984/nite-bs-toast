@@ -1,6 +1,6 @@
 /**
  * niteBsToast
- * v1.0.2 2022/06/10
+ * v1.0.3 2022/08/25
  * Author: Marco Scattina
  * https://github.com/nite1984/nite-bs-toast
  * 
