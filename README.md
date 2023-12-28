@@ -28,5 +28,16 @@ niteBsToast.hideLoadingToast();
 //In case you want to customize the selector for the toast container
 niteBsToast.settings({
     toastContainerSelector: '.toast-container',
+    toastHtmlTemplate: `<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header p-0">
+            <div style="border-left: 15px solid {{iconColor}};">
+                <div class="p-2 d-flex align-items-center">
+                    <strong>{{title}}</strong>
+                    <button type="button" class="btn-close mx-0" aria-label="Close" data-bs-dismiss="toast"></button>
+                </div>
+            </div>    
+        </div>
+        <div class="toast-body bg-white">{{text}}</div>
+        </div>`
 });
 ```

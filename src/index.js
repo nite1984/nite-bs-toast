@@ -1,6 +1,6 @@
 /**
  * niteBsToast
- * v1.0.3 2022/08/25
+ * v1.0.4 2023/12/28
  * Author: Marco Scattina
  * https://github.com/nite1984/nite-bs-toast
  * 
@@ -13,6 +13,17 @@ const niteBsToast = (function () {
 
     const defaults = {
         toastContainerSelector: '.toast-container',
+        toastHtmlTemplate: `<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header p-0">
+            <div style="border-left: 15px solid {{iconColor}};">
+                <div class="p-2 d-flex align-items-center">
+                    <strong>{{title}}</strong>
+                    <button type="button" class="btn-close mx-0" aria-label="Close" data-bs-dismiss="toast"></button>
+                </div>
+            </div>    
+        </div>
+        <div class="toast-body bg-white">{{text}}</div>
+        </div>`
     };
 
     let settings = Object.assign({}, defaults, {});
@@ -36,14 +47,10 @@ const niteBsToast = (function () {
                 break;
         }
 
-        let toastHtml = `<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="${iconColor}"></rect></svg>
-                <strong class="me-auto">${title}</strong>
-                <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="toast"></button>
-            </div>
-            <div class="toast-body">${text}</div>
-            </div>`;
+        const toastHtml = settings.toastHtmlTemplate
+            .replace('{{iconColor}}', iconColor)
+            .replace('{{title}}', title)
+            .replace('{{text}}', text);
 
         const toastTemplate = document.createElement('template');
         toastTemplate.innerHTML = toastHtml;
