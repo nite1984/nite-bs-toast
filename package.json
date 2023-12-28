@@ -1,6 +1,6 @@
 {
     "name": "@nite1984/nite-bs-toast",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Vanilla JS Bootstrap Toasts Generator",
     "main": "src/index.js",
     "scripts": {
